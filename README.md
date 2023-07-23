@@ -3,7 +3,7 @@
 
 ## Purpose ##
 
-The INTRO project is an experiment for a global network of storing and processing information in an integrative fashion.
+The INTRO project is an experiment of establishing a global network for storing and processing information in an integrative fashion.
 
 ## The layers ##
 

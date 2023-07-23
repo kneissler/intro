@@ -29,6 +29,24 @@ Data in INTRO is stored in two principle ways:
 
 ### Processing Layer ###
 
+There are two types of processing ressources:
+
+ * Deterministic: a programm that uses only deterministic commands will produce the same output when run on
+   identical input. An execution of a deterministic program is thus represented
+   as triple (progrem, input, output) or quadruple (program, input, execution trace, output). If a program 
+   is supposed to modify the state of the INTRO network, the output is interpreted as sequence of 
+   INTRO transactions (that may or may not succeed). Deterministic programs are supposed to be terminating.
+   If the output of a program is considered to modify the state of the INTRO network via transactions, we call
+   the process a "transformation", if the only change to the network is the creation of the execution triple/quadruple,
+   we call the process a "function".
+ * Interactive: A program may involve input from a user, depend on the state of the INTRO network or involve
+   non-deterministic input like current timestamp, entropy in form of random data (not pseudo-random!),
+   world state information. In that case the program may issue transactions to change the state of the INTRO 
+   network, and can react depending on the successful execution of issued transactions. Interactive programs
+   can run idefinitely (but they can decide to terminate on their own, or may be terminated forcefully from the 
+   outside). Interactive processes may display some user interface (to one or multiple users) or may run 
+   headless. In the first case we call the program an "application", in the second case we call it a "daemon".
+
 ### UserInterface Layer ###
 
 ## The phases ##

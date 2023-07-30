@@ -1,0 +1,55 @@
+{
+  "name": "HelloWorld4",
+  "description": "A simple hello world program (written in INTRO)",
+  "modules": [{
+    "name": "Main",
+    "methods": [{
+      "name": "main",
+      "parameters": [],
+      "returns": [],
+      "instructions" : [{
+        "type": "literal",
+        "value": "Hello World.",
+        "variable": "s"
+      }, {
+        "type": "object",
+        "variable": "o",
+        "fields": ["s"],
+        "methods": [{
+          "name": "get",
+          "parameters": [],
+          "returns": [
+            "s"
+          ],
+          "instructions": []
+        }],
+        "instructions": [{
+          "type": "ocall",
+          "object": "o",
+          "method": "get",
+          "arguments": [],
+          "returned": ["t"],
+          "instructions": []
+        }, {
+          "type": "mcall",
+          "module": "Test",
+          "method": "log",
+          "arguments": ["t"],
+          "returned": [],
+          "instructions": []
+        }]
+      }]
+    }]
+  }, {
+    "name": "Test",
+    "methods": [{
+      "name": "log",
+      "parameters": ["s"],
+      "returns": [],
+      "instructions" : [{
+        "type": "native",
+        "script": "console.log(s);"
+      }]
+    }]
+  }]
+}

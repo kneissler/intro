@@ -1,0 +1,20 @@
+{
+  "name": "HelloWorld",
+  "description": "A simple hello world program (written in INTRO)",
+  "modules": [{
+    "name": "Main",
+    "methods": [{
+      "name": "main",
+      "parameters": [],
+      "returns": [],
+      "instructions" : [{
+        "type": "literal",
+        "value": "Hello World",
+        "variable": "s"
+      }, {
+        "type": "native",
+        "script": "console.log(s);"
+      }]
+    }]
+  }]
+}

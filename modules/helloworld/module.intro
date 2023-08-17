@@ -1,0 +1,13 @@
+public {
+  interface Interface1<TYPE> {
+       method1: Int a, String b -> TYPE c, Int d
+       method2: List<TYPE> x
+  }
+  method: Int a -> Interface1<String> {
+     inst1
+     inst2
+  }
+}
+private {
+...
+}
